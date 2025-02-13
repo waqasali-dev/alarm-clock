@@ -61,6 +61,36 @@ button{
     margin-top: 10px;
     border-radius: 8px;
     animation: 2s alarm-on;
+    display: flex;
+}
+
+.alarm-time{
+
+    margin-left: 15px;
+    animation: 3s Opacity;
+
+}
+.remaining-time{
+
+    margin-left: auto;
+    margin-right: 15px;
+    animation: 3s Opacity;
+
+}
+
+@keyframes Opacity {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 @keyframes alarm-on {
@@ -79,3 +109,30 @@ button{
         width: 98%;
     }
 } 
+
+@media (max-width:565px) {
+    .container{
+        width: 100%;
+        animation: 1s alongation;
+    }
+    h1{
+        font-size: 15px;
+    }
+    .button-container{
+        margin-top: 25px;
+
+    }
+    button{
+        width: 75px;
+        font-size: 12px;
+    }
+
+    @keyframes alongation {
+        0%{
+            width: 85%;
+        }
+        100%{
+            width: 100%;
+        }
+    }
+}
