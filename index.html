@@ -5,20 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alarm-App</title>
     <link rel="stylesheet" href="./style.css"/>
+    <style>
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Wellcome, Set your alarm</h1>
+        <h1>Welcome, Set your alarm</h1>
         <div class="button-container">
-            <button class="delete-button">Delete</button>
-            <button class="add-alarm">Set Alarm</button>
+            <button class="delete-button" id="deleteButton">Delete</button>
+            <button class="add-alarm" id="addAlarm">Add Alarm</button>
         </div>
-        <div class="alarm-container">
-            <div class="alarm">
-                <h3 class="alarm-time"> set alarm time</h3>
-                <h3 class="remaining-time">remiining time</h3>
-            </div>
+        <h1 class="timeClock" id="timeClock">timer</h1>
+        <div class="alarm-container" id="alarmContainer">
+            
         </div>
     </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div class="alarm-form" id="alarmForm">
+        <div class="alarm-settings">
+            <h3 class="time">Time:</h3>
+            <div class="timerDiv" id="timerDiv">
+                <select class="timeInput" id="hour">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <h2>:</h2>
+                <select class="timeInput" id="minute">
+                    <option value="00">00</option>
+                    <option value="05">05</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+                    <option value="55">55</option>
+                </select>
+                <select class="meridian timeInput" id="meridian">
+                    <option value="am">AM</option>
+                    <option value="pm">PM</option>
+                </select>
+            </div>
+            <div class="days">
+                <button class="day mon" id="mon" value="mon">Mon</button>
+                <button class="day tue" id="tue" value="tue">Tue</button>
+                <button class="day wed" id="wed" value="wed">Wed</button>
+                <button class="day thu" id="thu" value="thu">Thu</button>
+            </div>
+            <div class="days">
+                <button class="day fri" id="fri" value="fri">Fri</button>
+                <button class="day sat" id="sat" value="sat">Sat</button>
+                <button class="day sun" id="sun" value="sun">Sun</button>
+            </div>
+            <button type="submit" id="submit" class="submit">Submit</button>
+            <button type="button" class="close-form" id="closeForm">Close</button>
+        </div>
+    </div>
+
+    <script src="./javaScript.js" charset="UTF-8"></script>
 </body>
 </html>
